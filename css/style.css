@@ -1,0 +1,302 @@
+
+
+
+/* font imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* Body */ 
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} 
+
+body.home{
+    background-image: url('../img/achtergrond1.png');  
+    background-position: center;
+    background-size: cover;   
+    background-repeat: no-repeat; 
+    height: 100vh;  
+    margin: 0;
+    padding: 0;
+ } 
+
+ body.overons{  
+    background-image: url('../img/achtergrond2.png');
+    background-size: cover;  
+    background-color: black;
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+    height: 100vh;
+ } 
+
+ body.afleveringen{ 
+    margin: 0;
+    background-image: url('../img/achtergrond3.png');
+    background-size: cover; 
+    background-color: black;
+    background-position: center; 
+    background-repeat: no-repeat; 
+ }
+
+    /* navigatie */
+ nav a{  
+font-size: 6rem;
+}     
+    
+ ul{
+    display: flex;
+    justify-content: space-around; 
+    list-style-type: none; 
+}   
+    
+ul a{
+    
+    color: white;  
+    font-family: "Lilita One", sans-serif;
+    transition: 0.5s ease;
+}
+    
+ul a:hover {
+    color: #14D223; 
+    font-size: 7rem; 
+} 
+    
+    /* header */ 
+    
+header{ 
+    margin: 100px;   
+    border: 20px solid;   
+    border-width: 10px;
+    border-right: 100vw;
+    border-left: 100vw;
+    border-top: 50px;
+    border-color: white; 
+    padding-bottom: 60px;
+}
+    
+    /* main */ 
+    main{
+    height: 80%; 
+    width: 100%;  
+    }     
+        
+    /* tekst */ 
+    
+    
+h1{
+   font-size: 8rem; 
+   display: flex; 
+   justify-content: center; 
+   color: white;  
+   margin-bottom: 1em;
+}    
+
+h2{
+    font-size: 5rem; 
+    display: flex; 
+    color: rgb(255, 255, 255);
+} 
+
+    
+p{ 
+    color: white;
+    font-size: 3em; 
+} 
+
+.highlight{
+    color: #14D223; 
+    display: flex;  
+    margin-left: 2rem; 
+    margin-right: 2rem;
+}
+    
+/*  Footer */
+
+footer{
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+footer h2, p{
+    color: white;
+} 
+
+
+.footerrechts{
+    display: flex;
+    justify-content: end; 
+}
+
+
+    /* logo index */ 
+.podcastlogo{ 
+width: 150rem;
+max-width: 100%;
+height: auto;
+margin: auto; 
+margin-bottom: 2rem;
+display: flex;
+justify-content: center;
+} 
+
+    /*  trailer podcast */ 
+.podcasttrailer{ 
+    padding-top: 7vh;
+    display: flex;
+    justify-content: center;   
+    transform: scale(3)
+}
+   
+
+/* afleveringen */ 
+
+.afleveringen{ 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;  
+} 
+
+.afleveringen img{
+width: 50vw; 
+margin-bottom: 10vh; 
+margin-left: 25vw;
+}
+
+
+/* introductie schermen */
+
+.amaroheading {
+    margin-top: 1rem;
+}
+
+.introducties {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50vh;
+    align-items: center; /* Ensure everything is centered */
+}
+
+.introducties h2, h3{
+    font-size: 6em;
+    margin-bottom: 20px;
+} 
+
+.introducties h2{ 
+    color: white; 
+} 
+
+.flip-card-back h3{
+ color: #14D223;
+}
+
+.introducties p {
+    color: rgb(0, 0, 0);
+}
+
+.introducties {
+    display: flex;
+    flex-direction: column; /* Stack the cards vertically */
+    align-items: center; /* Center the cards horizontally */
+    gap: 20px; /* Add space between each card */
+    margin: 0 auto; 
+
+.flip-card {
+    width: 50%;
+    height: 100ch;
+    margin: 20px;
+    display: flex 
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Rotate on hover */
+}
+
+/* Front of the card */
+.flip-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the full image is shown without cropping */
+}
+
+/* Back of the card */
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    transform: rotateY(180deg); /* Rotate the back of the card initially */
+    backface-visibility: hidden;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 3rem; 
+}
+
+.flip-card-back p {
+    font-size: 5rem; 
+    text-align: center;
+    margin: 0; 
+    margin-left: 4rem 
+    margin-right: 4rem;  
+}
+
+/* Ensure both front and back have matching proportions */
+.flip-card-front, .flip-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .flip-card {
+        height: auto; 
+    }
+
+    .flip-card-front img {
+        height: auto;
+    } 
+
+    .flip-card-back {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+}
+
+.flip-card h3{
+    margin-top: -3rem;  
+    margin-bottom: 2rem;
+    color: #14D223;
+} 
+
+.flip-card p{ 
+    padding-left: 2rem; 
+    padding-right: 2rem;
+}
+
